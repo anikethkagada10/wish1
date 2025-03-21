@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Birthday Wish</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      overflow: hidden;
+      color: white;
+    }
+
+    .card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: pop 1s infinite;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin: 10px auto;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cake {
+      width: 100px;
+      margin: 20px auto;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes pop {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .balloons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 50px;
+      height: 70px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .balloon img {
+      width: 100%;
+      height: auto;
+    }
+
+    .balloon:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .balloon:nth-child(2) {
+      left: 40%;
+      animation-delay: 2s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 60%;
+      animation-delay: 1s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 80%;
+      animation-delay: 3s;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+      }
+      to {
+        transform: translateY(-20%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="balloons">
+    <div class="balloon"><img src="images/ballon 1.webp" alt="Balloon"></div>
+    <div class="balloon"><img src="images/b3.webp" alt="Balloon"></div>
+    <div class="balloon"><img src="images/b3.webp" alt="Balloon"></div>
+    <div class="balloon"><img src="images/b 2.webp" alt="Balloon"></div>
+  </div>
+  <div class="card">
+    <div class="photo">
+      <img src="images/image2.jpg" alt="Her Photo">
+    </div>
+    <img src="images/cake.webp" class="cake" alt="Birthday Cake">
+    <h1>🎉 Happy Birthday chashmish! 🎂</h1>
+    <p>Wishing you a day filled with joy and laughter!</p>
+  </div>
+</body>
+</html>
